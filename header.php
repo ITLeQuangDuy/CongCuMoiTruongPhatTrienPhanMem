@@ -9,7 +9,16 @@
         <title>Website bán hàng</title>
     </head>
     <body>
-
+    <?php
+    session_start();
+    if(isset($_SESSION['user'])!="")
+    {
+      echo "<h2>Xin chao: ".$_SESSION['user']."<a href='./=logout.php'>Logout</a></h2>";
+    }
+    else{
+      echo "<h2> chua dang nhap <a href='./login.php'>Login</a> - <a href='./register.php'>Register</a></h2>";
+    }
+    ?>
     <!-- <div id="wrapper">
         <h2>Website Bán hàng</h2>
         <div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -20,8 +29,9 @@
             </div>
         </div>
     </div> -->
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Trang chủ</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -37,7 +47,7 @@
         <a class="nav-link" href="#">Giới thiệu</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Thông tin</a>
+        <a class="nav-link disabled" href="#">Đăng xuất</a>
       </li>
     </ul>
   </div>
