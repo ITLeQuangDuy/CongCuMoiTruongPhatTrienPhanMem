@@ -15,7 +15,8 @@ class Db
     } 
     public function query_execute($queryString){
         $connection = $this->connect();
-        //$connection->query("SET NAMES utf8S");
+        
+        $connection->query("SET NAMES utf8");//query truy van
         $result = $connection->query($queryString);
         $connection->close();
         return $result;

@@ -1,7 +1,7 @@
 <?php
 
 require_once("./entities/product.class.php");
-//require_once("./entities/category.class.php");
+require_once("./entities/category.class.php");
 
 if(isset($_POST["btnsubmit"])){
     $productName = $_POST["txtName"];
@@ -11,7 +11,7 @@ if(isset($_POST["btnsubmit"])){
     $description = $_POST["txtdesc"];
     $picture = $_POST["txtpic"];
 
-    $newProduct = new Product($productName, $cateID, $price, $quantity, $desription, $picture);
+    $newProduct = new Product($productName, $cateID, $price, $quantity, $description, $picture);
 
     $result = $newProduct->save();
     if(!$result)
@@ -57,7 +57,7 @@ if(isset($_POST["btnsubmit"])){
             <label>Số lượng sản phẩm</label>
         </div>
         <div class="lblinput">
-            <input type="text" name="txtName" value="<?php echo isset($_POST["txtName"]) ? $_POST["txtName"] : "" ; ?>" />
+            <input type="text" name="txtquantity" value="<?php echo isset($_POST["txtquantity"]) ? $_POST["txtquantity"] : "" ; ?>" />
         </div>
     </div>
     <!-- #giá sản phẩm -->
@@ -67,7 +67,7 @@ if(isset($_POST["btnsubmit"])){
             <label>Giá sản phẩm</label>
         </div>
         <div class="lblinput">
-            <input type="text" name="txtName" value="<?php echo isset($_POST["txtName"]) ? $_POST["txtName"] : "" ; ?>" />
+            <input type="text" name="txtprice" value="<?php echo isset($_POST["txtprice"]) ? $_POST["txtprice"] : "" ; ?>" />
         </div>
     </div>
     <!-- #loại sản phẩm -->
