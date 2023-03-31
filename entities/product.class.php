@@ -1,5 +1,5 @@
 <?php 
-require_once("/config/db.class.php");
+require_once("./config/db.class.php");
 
 class Product
 {
@@ -24,38 +24,17 @@ class Product
     public function save(){
 
         //xử lí upload hình ảnh
-        $file_temp = $this->picture['tmp_name'];
-        $user_file = $this->picture['name'];
-        $timestamp = date("Y")
+        // $file_temp = $this->picture['tmp_name'];
+        // $user_file = $this->picture['name'];
+        // $timestamp = date("Y")
 
         //end upload file
         $db = new Db();
 
-        $sql = "INSERT INTO Product(ProductName, CateID, Price, Quantity, Desription, Picture) VALUES
+        $sql = "INSERT INTO Product (ProductName, CateID, Price, Quantity, Desription, Picture) VALUES
         ('$this->productName','$this->cateID','$this->price','$this->quantity','$this->description','$this->picture')";
 
         $result = $db->query_execute($sql);
-        return $result;
-    }
-
-    public static function list_product(){
-        $db = new Db();
-        $sql = "SELECT * FROM product";
-        $result = $db->select_to_array($sql);
-        return $result;
-    }
-
-    public static function list_product_relate(){
-        $db = new Db();
-        $sql = "SELECT * FROM product WHERE CateID='$cateid' AND productID!=$id'";
-        $result = $db->select_to_array($sql);
-        return $result;
-    }
-
-    public static function get_product($id){
-        $db = new Db();
-        $sql = "SELECT * FROM product WHERE productID= '$id'";
-        $result = $db->select_to_array($sql);
         return $result;
     }
 }

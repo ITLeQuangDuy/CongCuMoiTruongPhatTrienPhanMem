@@ -6,7 +6,7 @@ class Db
     public function connect(){
         if(!isset(self::$connection)){
             $config = parse_ini_file("config.ini");
-            self::$connection = new mysqli("localhost", $config["root"], $config[""], $config["ecommerce"]);
+            self::$connection = new mysqli("localhost", $config["username"], $config["password"], $config["databasename"]);
         }
         if(self::$connection==false){
             return false;
@@ -15,7 +15,7 @@ class Db
     } 
     public function query_execute($queryString){
         $connection = $this->connect();
-        $connection->query("SET NAMES utf8S");
+        //$connection->query("SET NAMES utf8S");
         $result = $connection->query($queryString);
         $connection->close();
         return $result;

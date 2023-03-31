@@ -1,7 +1,7 @@
 <?php
 
 require_once("./entities/product.class.php");
-require_once("./entities/category.class.php");
+//require_once("./entities/category.class.php");
 
 if(isset($_POST["btnsubmit"])){
     $productName = $_POST["txtName"];
@@ -52,8 +52,24 @@ if(isset($_POST["btnsubmit"])){
     </div>
     <!-- #số lượng sản phẩm -->
     <div class="row">
+    <div class="row">
+        <div class="lbltitle">
+            <label>Số lượng sản phẩm</label>
+        </div>
+        <div class="lblinput">
+            <input type="text" name="txtName" value="<?php echo isset($_POST["txtName"]) ? $_POST["txtName"] : "" ; ?>" />
+        </div>
+    </div>
     <!-- #giá sản phẩm -->
     <div class="row">
+    <div class="row">
+        <div class="lbltitle">
+            <label>Giá sản phẩm</label>
+        </div>
+        <div class="lblinput">
+            <input type="text" name="txtName" value="<?php echo isset($_POST["txtName"]) ? $_POST["txtName"] : "" ; ?>" />
+        </div>
+    </div>
     <!-- #loại sản phẩm -->
     <div class="row">
         <div class="lbltitle">
@@ -81,6 +97,7 @@ if(isset($_POST["btnsubmit"])){
         </div>
     </div>
     <!-- #nút gửi form -->
+    
     <div class="row">
         <div class="submit">
             <input type="submit" name="btnsubmit" value="Thêm sản phẩm" />
