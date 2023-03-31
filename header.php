@@ -9,16 +9,7 @@
         <title>Website bán hàng</title>
     </head>
     <body>
-    <?php
-    session_start();
-    if(isset($_SESSION['user'])!="")
-    {
-      echo "<h2>Xin chao: ".$_SESSION['user']."<a href='./=logout.php'>Logout</a></h2>";
-    }
-    else{
-      echo "<h2> chua dang nhap <a href='./login.php'>Login</a> - <a href='./register.php'>Register</a></h2>";
-    }
-    ?>
+    
     <!-- <div id="wrapper">
         <h2>Website Bán hàng</h2>
         <div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -27,6 +18,7 @@
                     <a class="navbar-brand"href="./add_product.php">Danh sach san pham </a> 
                     <a class="navbar-brand"href="./list_product.php">Them san pham </a> 
             </div>
+            
         </div>
     </div> -->
 
@@ -47,7 +39,7 @@
         <a class="nav-link" href="#">Giới thiệu</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Đăng xuất</a>
+        <a class="nav-link " href="./login.php">Đăng nhập</a>
       </li>
     </ul>
   </div>

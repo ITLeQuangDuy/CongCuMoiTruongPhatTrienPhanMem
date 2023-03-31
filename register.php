@@ -28,6 +28,8 @@ if(isset($_POST['btn-signup']))
 
 <!-- Form -->
 
+
+
 <form method="post" style="width:30%">
     <div class ="form-group row">
         <label for ="txtname" class="col-sm-2 form-control-label">UserName</lable>
