@@ -104,3 +104,4 @@ if(isset($_POST["btnsubmit"])){
         </div>
     </div>
 </form>
+<?php include_once("footer.php"); ?>

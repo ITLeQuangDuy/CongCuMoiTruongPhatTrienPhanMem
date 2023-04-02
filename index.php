@@ -9,8 +9,8 @@
     <title>Document</title>
 </head>
 <body>
-<li>
-        <a href="./register.php">Dang Nhap</a>
+
+        <!-- <a href="./register.php">Dang Nhap</a> -->
 </body>
 </html>
 

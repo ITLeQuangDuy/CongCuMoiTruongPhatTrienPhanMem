@@ -40,13 +40,13 @@ if(isset($_POST['btn-signup']))
     <div class ="form-group row">
         <label for ="txtemail" class="col-sm-2 form-control-label">Email</lable>
         <div class="col-sm-10">
-            <input type="text" class ="form-control" name="txtname" placeholder="Email">
+            <input type="text" class ="form-control" name="txtemail" placeholder="Email">
         </div>
     </div>
     <div class ="form-group row">
-        <label for ="txtname" class="col-sm-2 form-control-label">Password</lable>
+        <label for ="txtpass" class="col-sm-2 form-control-label">Password</lable>
         <div class="col-sm-10">
-            <input type="text" class ="form-control" name="txtname" placeholder="Password">
+            <input type="text" class ="form-control" name="txtpass" placeholder="Password">
         </div>
     </div>
     <div class ="form-group row">
